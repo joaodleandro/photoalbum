@@ -21,7 +21,7 @@ def upload_image(request):
             return redirect('/')  
     else:
         form = ImageUploadForm()
-        return render(request, 'upload.html', {'form': form}) 
+        return render(request, 'upload_image.html', {'form': form}) 
     
 def confirm_delete(request, pk):
     photo = get_object_or_404(Photo, pk=pk)
