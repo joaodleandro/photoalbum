@@ -12,15 +12,13 @@
 <body>
     <form method="POST" action="" enctype="multipart/form-data">
         {% csrf_token %}
-        <textarea name="text" rows="25" cols="100"></textarea><br>
-        <input type="submit"/>
+
+        {% for photo in gallery reversed %}
+            <img src="{{photo.image.url}}" width="200" height="200">
+            <button><a href="{{ photo.image.url }}">Details</a></button>
+            <button><a href="">Delete</a></button>
+        {% endfor %}
     </form>
-    {% if user.is_authenticated %}
-        <h1> Olá {{user.username}} </h1>
-        <a href="logout"><button>Logout</button></a>
-    {% else %}
-        <a href="register"><button>Signup or Login</button></a>
-    {% endif %}
 
 </body>
 </html>

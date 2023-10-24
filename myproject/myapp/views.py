@@ -8,7 +8,10 @@ from .models import Photo
 
 # Create your views here.
 def index(request):
-    pass
+
+    gallery = Photo.objects.all()
+
+    return render(request, 'index.html', {'gallery': gallery}) 
 
 def upload_image(request):
     if request.method == 'POST':
