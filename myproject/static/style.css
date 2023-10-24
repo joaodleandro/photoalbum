@@ -1,0 +1,103 @@
+.gallery-title
+{
+    font-size: 36px;
+    color: #00a2ff;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 70px;
+}
+.gallery-title:after {
+    content: "";
+    position: absolute;
+    width: 22.5%;
+    left: 38.5%;
+    height: 45px;
+    border-bottom: 1px solid #5e5e5e;
+}
+
+.filter-button
+{
+    font-size: 18px;
+    border: 1px solid #00a2ff;
+    border-radius: 5px;
+    text-align: center;
+    color: #00a2ff;
+    margin-bottom: 30px;
+
+}
+.filter-button:hover
+{
+    font-size: 18px;
+    border: 1px solid #00a2ff;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #00a2ff;
+
+}
+.btn-default:active .filter-button:active
+{
+    background-color: #00a2ff;
+    color: white;
+}
+
+.filter-button-cancel
+{
+    font-size: 18px;
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+    text-align: center;
+    color: #ff0000;
+    margin-bottom: 30px;
+
+}
+.filter-button-cancel:hover
+{
+    font-size: 18px;
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #ff0000;
+
+}
+.red-link {
+    color: red;
+    text-decoration: none; 
+}
+.red-link:hover {
+    color: rgb(255, 255, 255) !important;
+    text-decoration: underline;
+}
+.port-image
+{
+    width: 100%;
+}
+
+.gallery_product
+{
+    margin-bottom: 30px;
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 70vh;
+}
+
+.custom-input:hover
+{
+    font-size: 18px;
+    border: 1px solid #00a2ff;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #00a2ff;
+}
+
+img{
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}

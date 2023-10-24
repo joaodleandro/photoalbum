@@ -1,20 +1,20 @@
-{% load static %}
+{% extends 'base.html' %}
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block title %}- Delete Photo{% endblock title %}
 
-    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-
-    <title>Template back-end test</title>
-</head>
-<body>
-    <form method="post">
-        {% csrf_token %}
-        <input type="submit" name="confirm" value="Confirm">
-        <button><a href="{% url 'index' %}">Cancel</a></button>
-    </form>
-
-</body>
-</html>
+{% block content %}
+    <div class="container" >
+        <div class="row">
+            <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-5">
+                <h1 class="gallery-title">Do you want to delete?</h1>
+            </div>
+            <form method="post">
+                {% csrf_token %}
+                <div class="center-content" align="center">
+                    <input class="btn btn-default filter-button" type="submit" name="confirm" value="Confirm">
+                    <a class="btn btn-default filter-button-cancel" href="{% url 'index' %}">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
