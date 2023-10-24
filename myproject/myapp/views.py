@@ -2,6 +2,7 @@ from django.shortcuts import get_object_or_404, redirect, render
 from django.http import HttpResponse
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
+from django.core.files.storage import default_storage
 
 from .forms import ImageUploadForm
 from .models import Photo
@@ -28,6 +29,7 @@ def confirm_delete(request, pk):
     photo = get_object_or_404(Photo, pk=pk)
 
     if request.method == 'POST':
+        default_storage.delete(photo.image.path)
         photo.delete()
         return redirect('/')
     else:
