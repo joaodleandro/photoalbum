@@ -1,0 +1,26 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+
+    <title>Template back-end test</title>
+</head>
+<body>
+    <form method="POST" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+        <textarea name="text" rows="25" cols="100"></textarea><br>
+        <input type="submit"/>
+    </form>
+    {% if user.is_authenticated %}
+        <h1> Olá {{user.username}} </h1>
+        <a href="logout"><button>Logout</button></a>
+    {% else %}
+        <a href="register"><button>Signup or Login</button></a>
+    {% endif %}
+
+</body>
+</html>
