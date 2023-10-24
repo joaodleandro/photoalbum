@@ -1,12 +1,8 @@
 import os
 from django.test import TestCase
 from django.urls import reverse
-
-from myproject import settings
 from .models import Photo
-from .forms import ImageUploadForm
 from django.core.files.uploadedfile import SimpleUploadedFile
-from shutil import rmtree
 
 # Create your tests here.
 class PhotoTestCase(TestCase):

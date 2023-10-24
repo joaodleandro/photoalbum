@@ -1,7 +1,4 @@
 from django.shortcuts import get_object_or_404, redirect, render
-from django.http import HttpResponse
-from django.contrib.auth.models import User, auth
-from django.contrib import messages
 from django.core.files.storage import default_storage
 
 from .forms import ImageUploadForm
