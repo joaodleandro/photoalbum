@@ -14,7 +14,7 @@
             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe"><a href="">
                 <img class="mb-3" src="{{photo.image.url}}" width="200" height="200">
                 <div align="center">
-                    <button class="btn btn-default filter-button"><a href="{{ photo.image.url }}">Details</a></button>
+                    <button class="btn btn-default filter-button"><a href="{% url 'view_image' photo.pk %}">Details</a></button>
                     <button class="btn btn-default filter-button"><a href="{% url 'confirm_delete' photo.pk %}">Delete</a></button>
                 </div>
             </div>

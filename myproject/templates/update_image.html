@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}- Upload Photo{% endblock title %}
+
+{% block content %}
+    <div class="container" >
+        <div class="row">
+            <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-5">
+                <h1 class="gallery-title">Update a photo</h1>
+            </div>
+            <form method="POST" action="" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="center-content">
+                    {{ form.as_p }}
+                    <button class="btn btn-default filter-button" type="submit">Upload</button>
+                </div>
+            </form>
+        </div>
+    </div>    
+{% endblock %}
