@@ -1,4 +1,4 @@
-from django.shortcuts import redirect, render
+from django.shortcuts import get_object_or_404, redirect, render
 from django.http import HttpResponse
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
@@ -23,3 +23,12 @@ def upload_image(request):
     else:
         form = ImageUploadForm()
         return render(request, 'upload.html', {'form': form}) 
+    
+def confirm_delete(request, pk):
+    photo = get_object_or_404(Photo, pk=pk)
+
+    if request.method == 'POST':
+        photo.delete()
+        return redirect('/')
+    else:
+        return render(request, 'confirm_delete.html', {'pk': pk})

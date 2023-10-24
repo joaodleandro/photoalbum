@@ -16,7 +16,7 @@
         {% for photo in gallery reversed %}
             <img src="{{photo.image.url}}" width="200" height="200">
             <button><a href="{{ photo.image.url }}">Details</a></button>
-            <button><a href="">Delete</a></button>
+            <button><a href="{% url 'confirm_delete' photo.pk %}">Delete</a></button>
         {% endfor %}
     </form>
 
