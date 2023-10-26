@@ -45,6 +45,6 @@ def update_image(request, pk):
             return redirect('view_image', pk=photo.pk) 
     else:
         form = ImageUploadForm(instance=photo)
-        return render(request, 'update_image.html', {'form': form, 'photo': photo})
+        return render(request, 'update_image.html', {'form': form})
     
     
