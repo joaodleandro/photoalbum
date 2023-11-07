@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+<!-- load wagtailcore_tags by adding this: -->
+{% load wagtailcore_tags %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+<!-- replace everything below with: -->
+{% block content %}
+    {% for feature in page.get_children.live %}
+        {% with feature=feature.specific %}
+            <h2><a href="{% pageurl feature %}">{{ feature.title }}</a></h2>
+            <p>{{ feature.intro }}</p>
+        {% endwith %}
+    {% endfor %}
+{% endblock %}
